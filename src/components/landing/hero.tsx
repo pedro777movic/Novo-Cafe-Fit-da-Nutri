@@ -15,10 +15,10 @@ export function Hero() {
                 A culpa é.
               </h1>
               <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl mt-4">
-                Um sistema simples de receitas para quem está cansada de pensar, se culpar e sentir que nunca acerta na alimentação.
+                Um jeito simples de comer sem pensar tanto, sem se culpar e sem sentir que está sempre errando.
               </p>
             </div>
-            <Link href="https://pay.cakto.com.br/3fmx6e8_558568" target="_blank" rel="noopener noreferrer" passHref>
+            <Link href="#final-cta" passHref>
               <Button size="lg" className="text-lg px-8 py-6 font-bold">
                 Liberar meu acesso
               </Button>
