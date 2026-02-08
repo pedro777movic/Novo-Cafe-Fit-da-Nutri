@@ -8,11 +8,11 @@ const features = [
   },
   {
     icon: <CheckCircle className="w-8 h-8 text-primary" />,
-    description: "Nada para decidir",
+    description: "Nada para calcular",
   },
   {
     icon: <CheckCircle className="w-8 h-8 text-primary" />,
-    description: "Nada para calcular",
+    description: "Nada para decidir",
   },
 ]
 
