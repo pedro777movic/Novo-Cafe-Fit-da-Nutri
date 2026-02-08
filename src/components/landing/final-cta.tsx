@@ -22,7 +22,7 @@ export function FinalCta() {
                 Você chegou até aqui.
                 </h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Isso não é sobre força de vontade — é sobre ter o ambiente certo para decidir melhor, todos os dias.
+                Isso não é sobre força de vontade. É sobre tornar o certo mais fácil, todos os dias.
                 </p>
             </div>
             
