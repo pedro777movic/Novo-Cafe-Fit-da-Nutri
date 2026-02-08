@@ -42,7 +42,7 @@ export function Experience() {
           </div>
           <ScrollReveal delay={500}>
             <p className="text-xl text-muted-foreground mt-4">
-              Você segue o processo. O corpo responde.
+              Você só segue. O corpo responde.
             </p>
           </ScrollReveal>
         </div>
