@@ -10,7 +10,7 @@ const features = [
   {
     icon: <Zap className="w-12 h-12 text-primary" />,
     title: "Retomar o controle.",
-    description: "Não é sobre força de vontade. É acordar e simplesmente saber o que comer — sem conversa interna, sem cansaço mental. A rotina flui. A decisão já está tomada.",
+    description: "Não é sobre força de vontade. É acordar sabendo exatamente o que comer, sem discutir consigo mesma, sem cansar a mente. A rotina flui. A decisão já está tomada.",
   },
   {
     icon: <ShieldCheck className="w-12 h-12 text-primary" />,
