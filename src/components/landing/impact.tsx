@@ -15,7 +15,7 @@ const features = [
   {
     icon: <ShieldCheck className="w-12 h-12 text-primary" />,
     title: "Confiar em si de novo.",
-    description: "Quando o processo é simples, a constância deixa de ser um esforço. Você para de se sabotar porque não precisa mais brigar consigo mesma. É só seguir — e ver funcionando.",
+    description: "Quando o processo é simples, a constância deixa de ser um esforço. Você para de se sabotar porque não precisa mais lutar contra si. É só seguir — e ver funcionando.",
   },
 ]
 
