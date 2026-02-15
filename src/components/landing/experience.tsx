@@ -4,15 +4,15 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 const features = [
   {
     icon: <CheckCircle className="w-8 h-8 text-primary" />,
+    description: "Nada para calcular",
+  },
+  {
+    icon: <CheckCircle className="w-8 h-8 text-primary" />,
     description: "Nada para decidir",
   },
   {
     icon: <CheckCircle className="w-8 h-8 text-primary" />,
     description: "Nada para resistir",
-  },
-  {
-    icon: <CheckCircle className="w-8 h-8 text-primary" />,
-    description: "Nada para calcular",
   },
 ]
 
