@@ -38,7 +38,7 @@ const notifications = [
   { text: "“O app facilitou tudo.”", icon: <Users className="h-5 w-5 text-primary" /> },
   { text: "“Não parei na segunda semana.”", icon: <Users className="h-5 w-5 text-primary" /> },
   { text: "“Comida virou aliada.”", icon: <Users className="h-5 w-5 text-primary" /> },
-  { text: "“Simplesmente continuei.”", icon: <Users className="h-5 w_5 text-primary" /> },
+  { text: "Simplesmente continuei.", icon: <Users className="h-5 w-5 text-primary" /> },
 
   // 4) EXPANSÃO DE CONSCIÊNCIA (alto valor percebido) - 10%
   { text: "Não é dieta. É ambiente.", icon: <Brain className="h-5 w-5 text-primary" /> },
