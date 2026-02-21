@@ -16,7 +16,7 @@ export function FinalCta() {
     <section id="final-cta" className="w-full py-12 md:py-16 lg:py-20 bg-background">
       <div className="container px-4 md:px-6">
         <ScrollReveal>
-          <div className="flex flex-col items-center space-y-8 text-center bg-card p-10 rounded-lg shadow-2xl">
+          <div className="flex flex-col items-center space-y-8 text-center bg-card p-6 md:p-10 rounded-lg shadow-2xl">
             <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl font-headline">
                 Você chegou até aqui.

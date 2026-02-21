@@ -61,7 +61,7 @@ export function Categories() {
                      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
                   </div>
                   <CardHeader className="p-4 flex-1">
-                    <CardTitle className="text-2xl font-headline group-hover:text-primary transition-colors">
+                    <CardTitle className="text-xl md:text-2xl font-headline group-hover:text-primary transition-colors">
                       {category.title}
                       {category.kcal && <span className="ml-2 text-sm font-normal text-muted-foreground">({category.kcal})</span>}
                     </CardTitle>

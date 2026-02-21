@@ -118,7 +118,7 @@ export function Showcase() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
               + 500 Receitas Fit
             </h2>
-            <p className="max-w-[900px] text-xl text-muted-foreground md:text-2xl/relaxed lg:text-xl/relaxed xl:text-2xl/relaxed">
+            <p className="max-w-[900px] text-lg text-muted-foreground md:text-xl/relaxed">
               Sim. Você pode comer isso.
             </p>
           </div>
@@ -192,7 +192,7 @@ export function Showcase() {
             </ScrollReveal>
         </div>
         <ScrollReveal delay={300}>
-          <p className="text-center text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mt-12 max-w-3xl mx-auto">
+          <p className="text-center text-muted-foreground text-base md:text-lg/relaxed mt-12 max-w-3xl mx-auto">
             Um app de receitas fit que elimina o caos mental da dieta e devolve o controle — sem esforço, sem culpa e sem regras.
           </p>
         </ScrollReveal>

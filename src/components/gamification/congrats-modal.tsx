@@ -6,6 +6,7 @@ import { Particles } from "./particles";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface CongratsModalProps {
   isOpen: boolean;
@@ -16,13 +17,14 @@ interface CongratsModalProps {
 export function CongratsModal({ isOpen, onClose, onCtaClick }: CongratsModalProps) {
   const [showParticles, setShowParticles] = useState(false);
   const [isRendered, setIsRendered] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (isOpen) {
       setIsRendered(true);
       const timer = setTimeout(() => {
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!prefersReducedMotion) {
+        if (!prefersReducedMotion && !isMobile) {
           setShowParticles(true);
         }
       }, 240); // After modal fade-in
@@ -38,7 +40,7 @@ export function CongratsModal({ isOpen, onClose, onCtaClick }: CongratsModalProp
       }, 300); // duration of fade-out animation
       return () => clearTimeout(closingTimer);
     }
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, isMobile]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -72,7 +74,7 @@ export function CongratsModal({ isOpen, onClose, onCtaClick }: CongratsModalProp
     >
       <div
         className={cn(
-          "relative bg-card rounded-lg shadow-2xl p-8 m-4 max-w-lg w-full text-center transition-all duration-200 ease-out",
+          "relative bg-card rounded-lg shadow-2xl p-6 md:p-8 m-4 max-w-lg w-full text-center transition-all duration-200 ease-out",
           "transform",
           isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
         )}
@@ -89,7 +91,7 @@ export function CongratsModal({ isOpen, onClose, onCtaClick }: CongratsModalProp
         <Particles show={showParticles} />
 
         <div className="relative z-10">
-          <h2 id="congrats-title" className="text-3xl font-bold font-display text-foreground">
+          <h2 id="congrats-title" className="text-2xl md:text-3xl font-bold font-display text-foreground">
             Parabéns — você chegou até aqui.
           </h2>
           <p className="mt-4 text-muted-foreground">
