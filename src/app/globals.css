@@ -37,6 +37,10 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --progress-track: 155 82% 23%;
+    --progress-fill: 133 31% 68%;
+    --celebration-accent: 44 45% 55%;
   }
   .dark {
     --background: 120 30% 8%;

@@ -8,10 +8,18 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
       fontFamily: {
-        body: ['Poppins', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
         headline: ['Poppins', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
         code: ['monospace'],
       },
       colors: {
@@ -65,6 +73,9 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        'progress-track': 'hsl(var(--progress-track))',
+        'progress-fill': 'hsl(var(--progress-fill))',
+        'celebration-accent': 'hsl(var(--celebration-accent))',
       },
       borderRadius: {
         lg: 'var(--radius)',
