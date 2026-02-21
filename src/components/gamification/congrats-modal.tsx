@@ -91,13 +91,10 @@ export function CongratsModal({ isOpen, onClose, onCtaClick }: CongratsModalProp
         <Particles show={showParticles} />
 
         <div className="relative z-10">
-          <h2 id="congrats-title" className="text-2xl md:text-3xl font-bold font-display text-foreground">
+          <h2 id="congrats-title" className="text-2xl md:text-3xl font-bold font-display text-foreground mb-8">
             Parabéns — você chegou até aqui.
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            Você leu, entendeu e está pronta para transformar sua rotina com receitas que realmente funcionam. Liberar seu acesso é o último passo.
-          </p>
-          <div className="mt-8 flex flex-col items-center">
+          <div className="flex flex-col items-center">
             <Link href="https://pay.cakto.com.br/3fmx6e8_558568" target="_blank" rel="noopener noreferrer" passHref>
                 <Button
                     size="lg"
