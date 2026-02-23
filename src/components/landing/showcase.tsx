@@ -104,10 +104,10 @@ const showcaseItems2 = [
 
 export function Showcase() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false })
   )
     const plugin2 = React.useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: true, direction: 'right' })
+    Autoplay({ delay: 2500, stopOnInteraction: false, direction: 'right' })
   )
 
   return (
@@ -128,8 +128,6 @@ export function Showcase() {
             <Carousel
                 plugins={[plugin.current]}
                 className="w-full max-w-full mx-auto"
-                onMouseEnter={plugin.current.stop}
-                onMouseLeave={plugin.current.reset}
                 opts={{
                 align: "start",
                 loop: true,
@@ -161,8 +159,6 @@ export function Showcase() {
             <Carousel
                 plugins={[plugin2.current]}
                 className="w-full max-w-full mx-auto"
-                onMouseEnter={plugin2.current.stop}
-                onMouseLeave={plugin2.current.reset}
                 opts={{
                 align: "start",
                 loop: true,
