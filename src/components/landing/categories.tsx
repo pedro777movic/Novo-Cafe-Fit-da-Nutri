@@ -17,7 +17,7 @@ const categories = [
   },
   {
     id: "guilt-free-cakes",
-    title: "Pudim fit de coco",
+    title: "Pudim Fit de Morango",
     kcal: "~250 kcal",
   },
   {

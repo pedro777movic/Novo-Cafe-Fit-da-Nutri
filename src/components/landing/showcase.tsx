@@ -48,57 +48,57 @@ const showcaseItems = [
 const showcaseItems2 = [
     {
       id: "showcase-6",
-      imageUrl: "https://i.postimg.cc/br4ZWpxw/5-receitas-fitness-praticas-para-o-jantar.jpg",
-      alt: "Showcase image 6",
-      hint: "fit dessert"
+      imageUrl: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop",
+      alt: "Salada fit colorida",
+      hint: "healthy salad"
     },
     {
       id: "showcase-7",
-      imageUrl: "https://i.postimg.cc/MHgnNq7K/5f1075b74c3be8b3cf01d6a1700ecd0b.jpg",
-      alt: "Showcase image 7",
-      hint: "quick breakfast"
+      imageUrl: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop",
+      alt: "Prato fit equilibrado",
+      hint: "balanced meal"
     },
     {
       id: "showcase-8",
-      imageUrl: "https://i.postimg.cc/DfN48dtQ/a8fc28694dfba997b42e3fcb81431323.jpg",
-      alt: "Showcase image 8",
-      hint: "protein shake"
+      imageUrl: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop",
+      alt: "Bowl de vegetais e grãos",
+      hint: "veggie bowl"
     },
     {
       id: "showcase-9",
-      imageUrl: "https://i.postimg.cc/9Xkwrtvt/cf17eec37e66843a9770e49af26b2bd7.jpg",
-      alt: "Showcase image 9",
-      hint: "healthy lunch"
+      imageUrl: "https://images.unsplash.com/photo-1494390248081-4e521a5940db?q=80&w=800&auto=format&fit=crop",
+      alt: "Café da manhã fit",
+      hint: "fit breakfast"
     },
     {
       id: "showcase-10",
-      imageUrl: "https://i.postimg.cc/1RdVfcLH/efa521e945a4b5b93f0dabff69faa72a.jpg",
-      alt: "Showcase image 10",
-      hint: "meal prep"
+      imageUrl: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=800&auto=format&fit=crop",
+      alt: "Salmão com aspargos",
+      hint: "salmon dish"
     },
      {
       id: "showcase-11",
-      imageUrl: "https://i.postimg.cc/3rq0dCP9/hamburguer-com-abobrinha-fitness-121358-800x450.webp",
-      alt: "Showcase image 11",
-      hint: "fit burger"
+      imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=800&auto=format&fit=crop",
+      alt: "Smoothie bowl",
+      hint: "smoothie bowl"
     },
     {
         id: "showcase-12",
-        imageUrl: "https://i.postimg.cc/mZn1tN0m/hamburguer-de-frango-fit-com-aveia-730x480.jpg",
-        alt: "Showcase image 12",
-        hint: "chicken burger"
+        imageUrl: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?q=80&w=800&auto=format&fit=crop",
+        alt: "Abacate toast fit",
+        hint: "avocado toast"
     },
     {
         id: "showcase-13",
-        imageUrl: "https://i.postimg.cc/DfN48dtB/httpsrevistaanamaria-com-brmediauploadslegacy20200902manjar-com-calda-de-ameixa-fit-um-prato-saboro.jpg",
-        alt: "Showcase image 13",
-        hint: "fit pudding"
+        imageUrl: "https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=800&auto=format&fit=crop",
+        alt: "Frutas frescas",
+        hint: "fresh fruits"
     },
     {
         id: "showcase-14",
-        imageUrl: "https://i.postimg.cc/KcW3Rrd9/i-Stock-515862304.jpg",
-        alt: "Showcase image 14",
-        hint: "healthy food"
+        imageUrl: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=800&auto=format&fit=crop",
+        alt: "Omelete fit",
+        hint: "fit omelette"
     }
   ]
 
@@ -162,7 +162,6 @@ export function Showcase() {
                 opts={{
                 align: "start",
                 loop: true,
-                direction: 'rtl'
                 }}
             >
                 <CarouselContent>
