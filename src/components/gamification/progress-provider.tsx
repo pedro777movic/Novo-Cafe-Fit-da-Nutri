@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ProgressBar } from "./progress-bar";
-import { CongratsModal } from "./congrats-modal";
 
 interface ProgressProviderProps {
   children: React.ReactNode;
@@ -17,17 +16,9 @@ const SECTION_IDS = [
 
 export function ProgressProvider({ children }: ProgressProviderProps) {
   const [progress, setProgress] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const sectionsRef = useRef<Map<string, boolean>>(new Map());
 
-  const handleModalOpen = useCallback(() => {
-    const hasSeenModal = sessionStorage.getItem("congratsModalSeen");
-    if (!hasSeenModal) {
-      setIsModalOpen(true);
-      sessionStorage.setItem("congratsModalSeen", "true");
-      // TODO: Log congrats_shown analytics event
-    }
-  }, []);
+
 
   useEffect(() => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
@@ -46,7 +37,7 @@ export function ProgressProvider({ children }: ProgressProviderProps) {
       setProgress(newProgress);
 
       if (newProgress === 100) {
-        handleModalOpen();
+        // Progress reached 100%
       }
     };
 
@@ -62,8 +53,7 @@ export function ProgressProvider({ children }: ProgressProviderProps) {
     const finalCta = document.querySelector('#final-cta a, #final-cta button');
     const ctaClickListener = () => {
         setProgress(100);
-        handleModalOpen();
-        // TODO: log `congrats_shown` (source: 'cta') analytics event
+        // TODO: log source: 'cta' analytics event
     };
     finalCta?.addEventListener('click', ctaClickListener);
 
@@ -71,21 +61,14 @@ export function ProgressProvider({ children }: ProgressProviderProps) {
       elements.forEach(el => observer.unobserve(el!));
       finalCta?.removeEventListener('click', ctaClickListener);
     };
-  }, [handleModalOpen]);
+  }, []);
   
-  const handleModalClose = () => {
-      setIsModalOpen(false);
-  };
 
-  const handleCtaClickInModal = () => {
-      // TODO: log congrats_cta_click analytics event
-  };
 
   return (
     <>
       <ProgressBar progress={progress} />
       {children}
-      <CongratsModal isOpen={isModalOpen} onClose={handleModalClose} onCtaClick={handleCtaClickInModal} />
     </>
   );
 }

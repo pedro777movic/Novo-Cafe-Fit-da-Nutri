@@ -4,25 +4,39 @@ import Link from "next/link"
 
 export function Hero() {
   return (
-    <section className="w-full py-20 md:py-28 lg:py-32">
-      <div className="container px-4 md:px-6">
+    <section className="w-full pt-24 pb-16 md:pt-36 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden relative">
+      {/* Background Glows */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full -z-10 pointer-events-none">
+        <div className="absolute top-[-10%] left-[10%] w-[40%] h-[40%] bg-primary/20 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[20%] right-[10%] w-[30%] h-[30%] bg-purple-500/10 blur-[100px] rounded-full" />
+      </div>
+
+      <div className="container px-4 md:px-6 relative">
         <ScrollReveal>
-          <div className="flex flex-col items-center space-y-6 text-center">
-            <div className="max-w-4xl">
-              <h1 className="text-4xl font-black tracking-tight sm:text-5xl md:text-6xl font-headline text-foreground">
-                Comida não é sua inimiga.
-                <br />
-                A culpa é.
+          <div className="flex flex-col items-center space-y-8 text-center">
+            <div className="max-w-4xl space-y-6">
+              <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm md:text-base">
+                Café Fit da Nutri
+              </h2>
+              <h1 className="text-4xl font-black tracking-tighter sm:text-7xl md:text-8xl font-headline text-foreground leading-[1.1] sm:leading-[0.9]">
+                Quero emagrecer <br className="hidden sm:block" />
+                <span className="bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent italic"> sem culpa</span>
               </h1>
-              <p className="mx-auto max-w-[700px] text-muted-foreground text-base sm:text-lg md:text-xl mt-4">
-                Um sistema simples de receitas para quem está cansada de pensar, se culpar e sentir que nunca acerta na alimentação.
+              <p className="mx-auto max-w-[700px] text-muted-foreground text-lg sm:text-xl md:text-2xl mt-4 leading-relaxed">
+                Emagreça comendo comida de verdade — sem dieta maluca, sem culpa e sem efeito rebote.
               </p>
             </div>
-            <Link href="#final-cta" passHref>
-              <Button size="lg" className="text-lg px-8 py-6 font-bold">
-                Liberar meu acesso
-              </Button>
-            </Link>
+            <div className="flex flex-col items-center gap-4 w-full max-w-sm">
+              <Link href="https://pay.kiwify.com.br/yoHKy7Q" target="_blank" rel="noopener noreferrer" passHref className="w-full">
+                <Button size="lg" className="w-full text-xl py-8 font-black premium-glow shimmer shadow-2xl shadow-primary/20">
+                  Quero meu acesso imediato
+                </Button>
+              </Link>
+              <p className="text-sm text-muted-foreground/60 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                Vagas de lançamento disponíveis hoje
+              </p>
+            </div>
           </div>
         </ScrollReveal>
       </div>

@@ -13,52 +13,24 @@ import { ScrollReveal } from "../scroll-reveal"
 
 const testimonials = [
   {
-    quote: "Mudei minha relação com a comida. Simples assim.",
+    quote: "Eu passava a semana perfeita e destruía tudo no fim de semana. Hoje como doce sem culpa e continuo emagrecendo. Finalmente parei de viver recomeçando toda segunda-feira.",
     author: "Juliana S.",
   },
   {
-    quote: "Nunca pensei que seria tão fácil comer bem.",
+    quote: "Abri o armário e percebi que não sentia mais ansiedade. Eu simplesmente sabia o que comer. Isso mudou meu corpo e minha cabeça.",
     author: "Marcos P.",
   },
   {
-    quote: "Isso não é um app. É liberdade.",
+    quote: "Achei que era só mais um app fit. Mas virou minha rotina. Hoje emagreço sem aquela sensação de punição.",
     author: "Beatriz C.",
   },
   {
-    quote: "A culpa foi embora. Só ficou o prazer.",
+    quote: "Minha autoestima voltou junto com meu corpo. As roupas começaram a servir de novo. E dessa vez, sem sofrimento.",
     author: "Carla M.",
   },
   {
-    quote: "Finalmente o controle está na minha mão. E é leve.",
-    author: "Ricardo F.",
-  },
-  {
-    quote: "É um atalho mental. Você só segue e o resultado vem.",
+    quote: "Parei de pensar em dieta. Comecei a viver. Isso resume tudo.",
     author: "Patricia A.",
-  },
-  {
-    quote: "Parei de pensar em dieta. Comecei a viver.",
-    author: "Fernando L.",
-  },
-  {
-    quote: "O corpo que eu queria, comendo o que eu gosto.",
-    author: "Amanda R.",
-  },
-  {
-    quote: "A constância virou rotina. Não uma luta.",
-    author: "Lucas G.",
-  },
-  {
-    quote: "Minha autoestima mudou junto com meu corpo.",
-    author: "Roberto N.",
-  },
-  {
-    quote: "Funciona. Ponto final.",
-    author: "Vanessa D.",
-  },
-  {
-    quote: "O fim da guerra com a balança.",
-    author: "Thiago B.",
   },
 ]
 
@@ -71,8 +43,9 @@ export function Testimonials() {
     <section className="w-full py-12 md:py-16 lg:py-20 bg-card">
       <div className="container px-4 md:px-6">
         <ScrollReveal>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">O controle já foi retomado.</h2>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+             <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm">Depoimentos</h2>
+            <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline italic">O controle já foi retomado.</h2>
           </div>
         </ScrollReveal>
         <ScrollReveal delay={200}>
@@ -87,11 +60,19 @@ export function Testimonials() {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <Card className="h-full flex flex-col justify-center bg-background/50 shadow-lg">
-                      <CardContent className="flex flex-col items-center justify-center p-6 text-center gap-4">
-                        <p className="text-lg font-medium">"{testimonial.quote}"</p>
-                        <span className="text-sm font-bold text-primary">{testimonial.author}</span>
+                  <div className="p-3 h-full">
+                    <Card className="h-full glass-card border-white/5 relative overflow-hidden group">
+                       <div className="absolute top-0 right-0 w-24 h-24 bg-primary/10 blur-2xl rounded-full translate-x-12 -translate-y-12" />
+                      <CardContent className="flex flex-col items-start justify-center p-8 h-full gap-6">
+                        <p className="text-xl font-medium leading-relaxed italic animate-in fade-in slide-in-from-bottom-4 duration-700">
+                            "{testimonial.quote}"
+                        </p>
+                        <div className="flex items-center gap-4">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center font-bold text-background uppercase">
+                                {testimonial.author[0]}
+                            </div>
+                            <span className="text-lg font-black font-headline text-primary">{testimonial.author}</span>
+                        </div>
                       </CardContent>
                     </Card>
                   </div>

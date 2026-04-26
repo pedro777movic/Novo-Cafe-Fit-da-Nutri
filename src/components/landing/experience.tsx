@@ -1,50 +1,57 @@
-import { CheckCircle } from "lucide-react"
+import { CheckCircle2 } from "lucide-react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
 const features = [
   {
-    icon: <CheckCircle className="w-8 h-8 text-primary" />,
+    icon: <CheckCircle2 className="w-8 h-8 text-primary" />,
     description: "Nada para calcular",
   },
   {
-    icon: <CheckCircle className="w-8 h-8 text-primary" />,
+    icon: <CheckCircle2 className="w-8 h-8 text-primary" />,
     description: "Nada para decidir",
   },
   {
-    icon: <CheckCircle className="w-8 h-8 text-primary" />,
+    icon: <CheckCircle2 className="w-8 h-8 text-primary" />,
     description: "Nada para resistir",
   },
 ]
 
 export function Experience() {
-  return (
-    <section className="w-full py-12 md:py-16 lg:py-20 bg-card">
-      <div className="container px-4 md:px-6">
-        <ScrollReveal>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Uma Experiência que Liberta</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Isso não é mais um app de dieta. É um atalho mental.
-            </p>
-          </div>
-        </ScrollReveal>
+  const experiences = [
+    {
+      title: "Comer sem culpa.",
+      description: "A melhor sensação não é emagrecer. É terminar uma refeição sem pensar: “eu estraguei tudo.” Sem culpa. Sem compensação. Sem promessas vazias.",
+      color: "from-blue-500/20 to-indigo-500/10"
+    },
+    {
+      title: "Retomar o controle.",
+      description: "Não é sobre disciplina. É abrir a geladeira e já saber exatamente o que comer. Sem ansiedade. Sem indecisão. Sem compulsão no fim da noite.",
+      color: "from-primary/20 to-purple-500/10"
+    },
+    {
+      title: "Confiar em si de novo.",
+      description: "Quando o processo é simples, a constância deixa de ser uma luta. Você para de se sabotar porque não precisa mais lutar contra si mesma todos os dias.",
+      color: "from-purple-500/20 to-pink-500/10"
+    }
+  ]
 
-        <div className="mx-auto grid max-w-5xl items-center justify-center gap-8 text-center">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <ScrollReveal key={index} delay={index * 150}>
-                <div className="flex items-center justify-center gap-4">
-                  {feature.icon}
-                  <span className="text-lg font-medium">{feature.description}</span>
+  return (
+    <section className="w-full py-16 md:py-24 lg:py-32 bg-card/20 relative">
+      <div className="container px-4 md:px-6">
+        <div className="grid gap-8 md:grid-cols-3">
+          {experiences.map((exp, i) => (
+            <ScrollReveal key={i} delay={i * 200}>
+              <div className={`glass-card p-8 md:p-10 rounded-[2.5rem] h-full flex flex-col space-y-6 group hover:translate-y-[-8px] transition-all duration-500`}>
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${exp.color} flex items-center justify-center p-3 border border-white/10 group-hover:scale-110 transition-transform duration-500`}>
+                  <div className="w-full h-full rounded-lg bg-background/40" />
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
-          <ScrollReveal delay={500}>
-            <p className="text-xl text-muted-foreground mt-4">
-              Você segue o processo. O corpo responde.
-            </p>
-          </ScrollReveal>
+                <div className="space-y-4">
+                  <h3 className="text-2xl md:text-3xl font-black font-headline leading-tight">{exp.title}</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">{exp.description}</p>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>

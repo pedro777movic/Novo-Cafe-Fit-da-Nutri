@@ -1,61 +1,104 @@
 import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/scroll-reveal"
-import { Check } from "lucide-react"
+import { Check, X, AlertCircle } from "lucide-react"
 import Link from "next/link"
+import { CountdownTimer } from "../countdown-timer"
 
 export function FinalCta() {
   const features = [
     "Acesso imediato ao app de receitas fit",
-    "Receitas organizadas por café da manhã, almoços leves, bolos sem culpa, sobremesas zero e airfryer proteica",
-    "Mais de 500 receitas simples, possíveis e funcionais",
-    "Planejamento alimentar que decide por você — sem esforço, sem culpa e sem regras",
+    "+500 receitas organizadas para emagrecimento real",
+    "Cafés da manhã leves e rápidos",
+    "Almoços práticos para rotina corrida",
+    "Bolos e sobremesas sem culpa",
+    "Receitas zero desculpas para airfryer",
+    "Método Controle Invisível para acabar com a indecisão alimentar",
+    "Planejamento alimentar que decide por você",
     "Acesso pelo celular, no seu tempo, do seu jeito",
   ]
 
+  const negatives = [
+    "Nada de cardápios impossíveis.",
+    "Nada de contagem obsessiva.",
+    "Nada de viver em culpa.",
+  ]
+
   return (
-    <section id="final-cta" className="w-full py-12 md:py-16 lg:py-20 bg-background">
-      <div className="container px-4 md:px-6">
+    <section id="final-cta" className="w-full py-16 md:py-24 lg:py-32 bg-background relative overflow-hidden">
+      <div className="container px-4 md:px-6 relative">
         <ScrollReveal>
-          <div className="flex flex-col items-center space-y-8 text-center bg-card p-6 md:p-10 rounded-lg shadow-2xl">
-            <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl font-headline">
-                Você chegou até aqui.
-                </h2>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                Isso não é sobre força de vontade — é sobre ter o ambiente certo para decidir melhor, todos os dias.
-                </p>
-            </div>
+          <div className="flex flex-col items-center space-y-12 text-center max-w-5xl mx-auto">
             
-            <div className="flex flex-col items-center space-y-4">
-              <Link href="https://pay.cakto.com.br/3fmx6e8_558568" target="_blank" rel="noopener noreferrer" passHref>
-                <Button size="lg" variant="secondary" className="text-lg px-10 py-6 font-bold shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-shadow">
-                  Liberar meu acesso
-                </Button>
-              </Link>
-               <p className="text-sm text-muted-foreground">Acesso liberado por tempo limitado</p>
+            <div className="space-y-6 max-w-3xl">
+                <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline">
+                    Você chegou até aqui.
+                </h2>
+                <div className="space-y-4 text-xl text-muted-foreground leading-relaxed">
+                    <p>E no fundo, você já sabe: o problema nunca foi comida. Foi tentar emagrecer do jeito errado.</p>
+                    <p className="font-bold text-foreground italic">Dietas restritivas geram culpa. Culpa gera compulsão. Compulsão gera frustração. E o ciclo nunca acaba.</p>
+                    <p>O Café Fit quebra isso. Você não precisa de mais motivação. Você precisa de um sistema que funcione até nos dias ruins.</p>
+                </div>
             </div>
 
-            <div className="border-t border-border/50 w-full max-w-2xl my-8"></div>
+            <div className="w-full glass-card p-8 md:p-16 rounded-[3rem] border-white/10 relative overflow-hidden shadow-[0_0_100px_rgba(var(--primary),0.1)]">
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-purple-500 to-primary" />
+                
+                <div className="grid lg:grid-cols-2 gap-12 text-left items-start">
+                    <div className="space-y-8">
+                        <div className="space-y-2">
+                             <h3 className="text-2xl font-black font-headline tracking-tight">O que você recebe hoje:</h3>
+                             <p className="text-primary font-bold">Acesso imediato e vitalício</p>
+                        </div>
+                        <ul className="space-y-4">
+                            {features.map((feature, index) => (
+                            <li key={index} className="flex items-start gap-3 group">
+                                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-primary/30 transition-colors">
+                                    <Check className="w-4 h-4 text-primary" />
+                                </div>
+                                <span className="text-muted-foreground font-medium">{feature}</span>
+                            </li>
+                            ))}
+                        </ul>
+                    </div>
 
-            <div className="text-left max-w-2xl w-full mx-auto space-y-6">
-                <h3 className="text-xl font-bold text-center font-headline">O que você recebe ao liberar o acesso:</h3>
-                <ul className="space-y-3">
-                    {features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                    ))}
-                </ul>
-                <p className="text-center text-sm text-muted-foreground/80 italic pt-4">
-                    *Nada de cardápios impossíveis.
-                    <br />
-                    Nada de contagem obsessiva.
-                    <br />
-                    Só comida que faz sentido para a sua rotina.*
-                </p>
+                    <div className="space-y-8 lg:border-l lg:border-white/5 lg:pl-12">
+                        <div className="space-y-6">
+                             {negatives.map((neg, i) => (
+                                <div key={i} className="flex items-center gap-3 text-muted-foreground/60 line-through decoration-destructive/50">
+                                    <X className="w-5 h-5 text-destructive/50" />
+                                    <span>{neg}</span>
+                                </div>
+                             ))}
+                        </div>
+
+                        <div className="bg-primary/5 border border-primary/20 p-8 rounded-3xl space-y-6 relative overflow-hidden shimmer">
+                             <div className="space-y-1">
+                                <p className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Valor Temporário</p>
+                                <h4 className="text-3xl font-black font-headline">Oferta de Lançamento</h4>
+                             </div>
+                             
+                             <div className="space-y-4">
+                                <Link href="https://pay.kiwify.com.br/yoHKy7Q" target="_blank" rel="noopener noreferrer" passHref className="w-full">
+                                    <Button size="lg" className="w-full text-xl py-8 font-black premium-glow shimmer">
+                                        Quero emagrecer sem culpa agora
+                                    </Button>
+                                </Link>
+                                <div className="flex flex-col items-center gap-2">
+                                     <CountdownTimer />
+                                     <p className="text-xs text-muted-foreground/60 italic flex items-center gap-1">
+                                        <AlertCircle className="w-3 h-3" />
+                                        Após esse lote, o preço sobe automaticamente.
+                                     </p>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <div className="pt-8">
+                 <p className="text-muted-foreground/40 text-sm">© 2026 Café Fit da Nutri. All rights reserved.</p>
+            </div>
 
           </div>
         </ScrollReveal>

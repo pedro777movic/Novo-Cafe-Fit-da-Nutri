@@ -107,18 +107,18 @@ export function Showcase() {
     Autoplay({ delay: 2000, stopOnInteraction: false })
   )
     const plugin2 = React.useRef(
-    Autoplay({ delay: 2500, stopOnInteraction: false, direction: 'right' })
+    Autoplay({ delay: 2500, stopOnInteraction: false })
   )
 
   return (
     <section className="w-full py-12 md:py-16 lg:py-20 bg-background">
       <div className="container px-4 md:px-6">
         <ScrollReveal>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
+            <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline italic">
               + 500 Receitas Fit
             </h2>
-            <p className="max-w-[900px] text-lg text-muted-foreground md:text-xl/relaxed">
+            <p className="max-w-[700px] text-xl text-muted-foreground md:text-2xl font-medium tracking-tight">
               Sim. Você pode comer isso.
             </p>
           </div>
@@ -162,6 +162,7 @@ export function Showcase() {
                 opts={{
                 align: "start",
                 loop: true,
+                direction: 'rtl'
                 }}
             >
                 <CarouselContent>
@@ -188,9 +189,12 @@ export function Showcase() {
             </ScrollReveal>
         </div>
         <ScrollReveal delay={300}>
-          <p className="text-center text-muted-foreground text-base md:text-lg/relaxed mt-12 max-w-3xl mx-auto">
-            Um app de receitas fit que elimina o caos mental da dieta e devolve o controle — sem esforço, sem culpa e sem regras.
-          </p>
+          <div className="mt-16 text-center max-w-4xl mx-auto space-y-6">
+            <div className="h-px w-24 bg-primary/30 mx-auto" />
+            <p className="text-muted-foreground text-lg md:text-2xl leading-relaxed italic">
+              "Um app de receitas fit que elimina o caos mental da dieta e devolve o controle — sem esforço, sem culpa e sem efeito sanfona."
+            </p>
+          </div>
         </ScrollReveal>
       </div>
     </section>
