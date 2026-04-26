@@ -40,7 +40,7 @@ export function FinalCta() {
                 </div>
             </div>
 
-            <div className="w-full glass-card p-6 md:p-16 rounded-3xl md:rounded-[3rem] border-white/10 relative overflow-hidden shadow-[0_0_100px_rgba(var(--primary),0.1)]">
+            <div className="w-full glass-card px-4 py-10 sm:p-16 rounded-3xl md:rounded-[3rem] border-white/10 relative shadow-[0_0_100px_rgba(var(--primary),0.1)]">
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-purple-500 to-primary" />
                 
                 <div className="grid lg:grid-cols-2 gap-12 text-left items-start">
@@ -71,7 +71,7 @@ export function FinalCta() {
                              ))}
                         </div>
 
-                        <div className="bg-primary/5 border border-primary/20 p-8 rounded-3xl space-y-6 relative overflow-hidden shimmer">
+                        <div className="bg-primary/5 border border-primary/20 px-4 py-8 sm:p-8 rounded-3xl space-y-6 relative shimmer">
                              <div className="space-y-1">
                                 <p className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Valor Temporário</p>
                                 <h4 className="text-3xl font-black font-headline">Oferta de Lançamento</h4>
@@ -79,7 +79,7 @@ export function FinalCta() {
                              
                              <div className="space-y-4">
                                 <Link href="https://pay.kiwify.com.br/yoHKy7Q" target="_blank" rel="noopener noreferrer" passHref className="w-full">
-                                    <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-black premium-glow shimmer">
+                                    <Button size="lg" className="w-full h-auto text-lg md:text-xl py-6 md:py-8 font-black premium-glow shimmer whitespace-normal text-center leading-tight">
                                         Quero emagrecer sem culpa agora
                                     </Button>
                                 </Link>

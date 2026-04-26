@@ -20,7 +20,7 @@ export function Hero() {
               </h2>
               <h1 className="text-4xl font-black tracking-tighter sm:text-7xl md:text-8xl font-headline text-foreground leading-[1.1] sm:leading-[0.9]">
                 Quero emagrecer <br className="hidden sm:block" />
-                <span className="bg-gradient-to-b from-white to-white/40 bg-clip-text text-transparent italic"> sem culpa</span>
+                <span className="bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent italic"> sem culpa</span>
               </h1>
               <p className="mx-auto max-w-[700px] text-muted-foreground text-lg sm:text-xl md:text-2xl mt-4 leading-relaxed">
                 Emagreça comendo comida de verdade — sem dieta maluca, sem culpa e sem efeito rebote.
