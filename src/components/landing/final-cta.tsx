@@ -3,6 +3,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 import { Check, X, AlertCircle } from "lucide-react"
 import Link from "next/link"
 import { CountdownTimer } from "../countdown-timer"
+import { trackInitiateCheckout } from "@/lib/tracking"
 
 export function FinalCta() {
   const features = [
@@ -15,6 +16,7 @@ export function FinalCta() {
     "Método Controle Invisível para acabar com a indecisão alimentar",
     "Planejamento alimentar que decide por você",
     "Acesso pelo celular, no seu tempo, do seu jeito",
+    "Acesso imediato e vitalício",
   ]
 
   const negatives = [
@@ -47,7 +49,6 @@ export function FinalCta() {
                     <div className="space-y-8">
                         <div className="space-y-2">
                              <h3 className="text-2xl font-black font-headline tracking-tight">O que você recebe hoje:</h3>
-                             <p className="text-primary font-bold">Acesso imediato e vitalício</p>
                         </div>
                         <ul className="space-y-4">
                             {features.map((feature, index) => (
@@ -79,7 +80,11 @@ export function FinalCta() {
                              
                              <div className="space-y-4">
                                 <Link href="https://pay.kiwify.com.br/yoHKy7Q" target="_blank" rel="noopener noreferrer" passHref className="w-full">
-                                    <Button size="lg" className="w-full h-auto text-lg md:text-xl py-6 md:py-8 font-black premium-glow shimmer whitespace-normal text-center leading-tight">
+                                    <Button 
+                                      size="lg" 
+                                      className="w-full h-auto text-lg md:text-xl py-6 md:py-8 font-black premium-glow shimmer whitespace-normal text-center leading-tight"
+                                      onClick={trackInitiateCheckout}
+                                    >
                                         Quero emagrecer sem culpa agora
                                     </Button>
                                 </Link>

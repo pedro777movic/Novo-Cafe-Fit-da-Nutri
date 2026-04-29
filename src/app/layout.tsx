@@ -30,6 +30,13 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=1125280262863080&ev=PageView&noscript=1"
             alt=""
           />
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://analytics.tiktok.com/i18n/pixel/events.js?sdkid=D7MHQFRC77U9UIR3FF8G&noscript=1"
+            alt=""
+          />
         </noscript>
 
         {children}

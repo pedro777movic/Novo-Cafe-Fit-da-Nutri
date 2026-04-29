@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import Link from "next/link"
+import { trackInitiateCheckout } from "@/lib/tracking"
 
 export function Hero() {
   return (
@@ -28,7 +29,11 @@ export function Hero() {
             </div>
             <div className="flex flex-col items-center gap-4 w-full max-w-sm">
               <Link href="https://pay.kiwify.com.br/yoHKy7Q" target="_blank" rel="noopener noreferrer" passHref className="w-full">
-                <Button size="lg" className="w-full text-xl py-8 font-black premium-glow shimmer shadow-2xl shadow-primary/20">
+                <Button 
+                  size="lg" 
+                  className="w-full text-xl py-8 font-black premium-glow shimmer shadow-2xl shadow-primary/20"
+                  onClick={trackInitiateCheckout}
+                >
                   Quero meu acesso imediato
                 </Button>
               </Link>
