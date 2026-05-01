@@ -22,18 +22,22 @@ const testimonials = [
   {
     quote: "Abri o armário e percebi que não sentia mais ansiedade. Eu simplesmente sabia o que comer. Isso mudou meu corpo e minha cabeça.",
     author: "Marcos P.",
+    result: "-7kg"
   },
   {
     quote: "Achei que era só mais um app fit. Mas virou minha rotina. Hoje emagreço sem aquela sensação de punição.",
     author: "Beatriz C.",
+    result: "-8kg"
   },
   {
     quote: "Minha autoestima voltou junto com meu corpo. As roupas começaram a servir de novo. E dessa vez, sem sofrimento.",
     author: "Carla M.",
+    result: "-14kg"
   },
   {
     quote: "Parei de pensar em dieta. Comecei a viver. Isso resume tudo.",
     author: "Patricia A.",
+    result: "-9kg"
   },
 ]
 
