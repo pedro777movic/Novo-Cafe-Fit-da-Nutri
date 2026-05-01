@@ -30,7 +30,7 @@ export function Hero() {
               <div className="flex flex-col md:flex-row items-center gap-6 p-6 rounded-3xl glass-card border-white/5 max-w-3xl mt-8">
                 <div className="w-24 h-24 rounded-2xl overflow-hidden shrink-0 border-2 border-primary/20 shadow-xl shadow-primary/10">
                   <img 
-                    src="/assets/nutri-ana.png" 
+                    src="/assets/nutri-ana.jpg" 
                     alt="Nutricionista Ana Cantanhede" 
                     className="w-full h-full object-cover"
                   />
