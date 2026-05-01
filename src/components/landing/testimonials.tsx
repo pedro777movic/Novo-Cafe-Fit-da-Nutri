@@ -1,7 +1,9 @@
 "use client"
 
 import * as React from "react"
+import Link from "next/link"
 import Autoplay from "embla-carousel-autoplay"
+import { Button } from "@/components/ui/button"
 
 import { Card, CardContent } from "@/components/ui/card"
 import {
