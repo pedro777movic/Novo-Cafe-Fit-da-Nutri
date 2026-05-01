@@ -20,12 +20,28 @@ export function Hero() {
                 Café Fit da Nutri
               </h2>
               <h1 className="text-4xl font-black tracking-tighter sm:text-7xl md:text-8xl font-headline text-foreground leading-[1.1] sm:leading-[0.9]">
-                Quero emagrecer <br className="hidden sm:block" />
-                <span className="bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent italic"> sem culpa</span>
+                Emagreça comendo <br className="hidden sm:block" />
+                <span className="bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent italic"> receitas fit</span>
               </h1>
               <p className="mx-auto max-w-[700px] text-muted-foreground text-lg sm:text-xl md:text-2xl mt-4 leading-relaxed">
-                Emagreça comendo comida de verdade — sem dieta maluca, sem culpa e sem efeito rebote.
+                Emagreça comendo receitas fit que você realmente vai fazer — sem viver em guerra com a comida.
               </p>
+
+              <div className="flex flex-col md:flex-row items-center gap-6 p-6 rounded-3xl glass-card border-white/5 max-w-3xl mt-8">
+                <div className="w-24 h-24 rounded-2xl overflow-hidden shrink-0 border-2 border-primary/20 shadow-xl shadow-primary/10">
+                  <img 
+                    src="/assets/nutri-ana.png" 
+                    alt="Nutricionista Ana Cantanhede" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="text-left space-y-2">
+                  <p className="text-sm text-primary font-bold tracking-wider uppercase">Desenvolvido por especialista</p>
+                  <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                    <span className="text-foreground font-bold">Ana Cantanhede</span>, especialista em comportamento alimentar e emagrecimento sustentável. Com mais de 10 anos de experiência clínica, Ana criou o Café Fit após perceber que suas pacientes não precisavam de mais dietas — precisavam de um sistema que funcionasse na vida real.
+                  </p>
+                </div>
+              </div>
             </div>
             <div className="flex flex-col items-center gap-4 w-full max-w-sm">
               <Link href="https://pay.kiwify.com.br/yoHKy7Q" target="_blank" rel="noopener noreferrer" passHref className="w-full">

@@ -6,17 +6,35 @@ import { CountdownTimer } from "../countdown-timer"
 import { trackInitiateCheckout } from "@/lib/tracking"
 
 export function FinalCta() {
-  const features = [
-    "Acesso imediato ao app de receitas fit",
-    "+500 receitas organizadas para emagrecimento real",
-    "Cafés da manhã leves e rápidos",
-    "Almoços práticos para rotina corrida",
-    "Bolos e sobremesas sem culpa",
-    "Receitas zero desculpas para airfryer",
-    "Método Controle Invisível para acabar com a indecisão alimentar",
-    "Planejamento alimentar que decide por você",
-    "Acesso pelo celular, no seu tempo, do seu jeito",
-    "Acesso imediato e vitalício",
+  const benefits = [
+    {
+      title: "Acesso imediato ao app de receitas fit",
+      desc: "Comece a mudar sua alimentação ainda hoje, sem espera"
+    },
+    {
+      title: "+500 receitas organizadas para emagrecimento real",
+      desc: "Nunca mais fique sem ideia do que comer"
+    },
+    {
+      title: "Cafés da manhã leves e rápidos",
+      desc: "Comece o dia sem culpa, mesmo com pressa"
+    },
+    {
+      title: "Almoços práticos para rotina corrida",
+      desc: "Nutrição de verdade que cabe no seu tempo"
+    },
+    {
+      title: "Bolos e sobremesas sem culpa",
+      desc: "Mate a vontade de doce sem destruir o progresso"
+    },
+    {
+      title: "Receitas zero desculpas para airfryer",
+      desc: "Praticidade máxima para quem não gosta de cozinhar"
+    },
+    {
+      title: "Acesso vitalício e atualizações",
+      desc: "Um sistema para a vida toda, sem mensalidades"
+    }
   ]
 
   const negatives = [
@@ -50,13 +68,16 @@ export function FinalCta() {
                         <div className="space-y-2">
                              <h3 className="text-2xl font-black font-headline tracking-tight">O que você recebe hoje:</h3>
                         </div>
-                        <ul className="space-y-4">
-                            {features.map((feature, index) => (
-                            <li key={index} className="flex items-start gap-3 group">
-                                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-primary/30 transition-colors">
+                        <ul className="space-y-6">
+                            {benefits.map((benefit, index) => (
+                            <li key={index} className="flex items-start gap-4 group">
+                                <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0 mt-1 group-hover:bg-primary/30 transition-colors">
                                     <Check className="w-4 h-4 text-primary" />
                                 </div>
-                                <span className="text-muted-foreground font-medium">{feature}</span>
+                                <div className="space-y-1">
+                                    <span className="text-foreground font-bold block">{benefit.title}</span>
+                                    <span className="text-muted-foreground text-sm leading-tight block">→ {benefit.desc}</span>
+                                </div>
                             </li>
                             ))}
                         </ul>
@@ -75,7 +96,13 @@ export function FinalCta() {
                         <div className="bg-primary/5 border border-primary/20 px-4 py-8 sm:p-8 rounded-3xl space-y-6 relative shimmer">
                              <div className="space-y-1">
                                 <p className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Valor Temporário</p>
-                                <h4 className="text-3xl font-black font-headline">Oferta de Lançamento</h4>
+                                <div className="flex flex-col">
+                                    <span className="text-muted-foreground/60 line-through text-lg">De R$ 97,00</span>
+                                    <div className="flex items-baseline gap-2">
+                                        <span className="text-sm font-bold text-primary">Por apenas</span>
+                                        <h4 className="text-5xl font-black font-headline text-primary">R$ 29,90</h4>
+                                    </div>
+                                </div>
                              </div>
                              
                              <div className="space-y-4">
@@ -101,8 +128,22 @@ export function FinalCta() {
                 </div>
             </div>
 
+            <div className="w-full max-w-2xl bg-primary/5 border border-primary/10 rounded-3xl p-8 flex flex-col md:flex-row items-center gap-8 text-left">
+                <div className="w-20 h-20 shrink-0 bg-primary/10 rounded-full flex items-center justify-center">
+                    <img src="https://img.icons8.com/fluency/96/guarantee.png" alt="Garantia" className="w-12 h-12" />
+                </div>
+                <div className="space-y-2">
+                    <h4 className="text-xl font-bold flex items-center gap-2">
+                        <span className="text-2xl">🔒</span> Garantia de 7 dias
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                        Teste o Café Fit por 7 dias. Se não sentir diferença na sua relação com a comida, devolvemos 100% do seu dinheiro. <span className="text-foreground font-bold">Sem perguntas. Sem burocracia.</span>
+                    </p>
+                </div>
+            </div>
+
             <div className="pt-8">
-                 <p className="text-muted-foreground/40 text-sm">© 2026 Café Fit da Nutri. All rights reserved.</p>
+                 <p className="text-muted-foreground/40 text-sm">© 2026 Café Fit da Nutri. Todos os direitos reservados.</p>
             </div>
 
           </div>

@@ -13,8 +13,9 @@ import { ScrollReveal } from "../scroll-reveal"
 
 const testimonials = [
   {
-    quote: "Eu passava a semana perfeita e destruía tudo no fim de semana. Hoje como doce sem culpa e continuo emagrecendo. Finalmente parei de viver recomeçando toda segunda-feira.",
+    quote: "Eu passava a semana perfeita e destruía tudo no fim de semana. Hoje como doce sem culpa e já perdi 12kg em 4 meses. Finalmente parei de viver recomeçando toda segunda-feira.",
     author: "Juliana S.",
+    result: "-12kg"
   },
   {
     quote: "Abri o armário e percebi que não sentia mais ansiedade. Eu simplesmente sabia o que comer. Isso mudou meu corpo e minha cabeça.",
@@ -71,7 +72,14 @@ export function Testimonials() {
                             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center font-bold text-background uppercase">
                                 {testimonial.author[0]}
                             </div>
-                            <span className="text-lg font-black font-headline text-primary">{testimonial.author}</span>
+                            <div className="flex flex-col">
+                                <span className="text-lg font-black font-headline text-primary">{testimonial.author}</span>
+                                {testimonial.result && (
+                                    <span className="text-xs font-bold text-green-500 bg-green-500/10 px-2 py-0.5 rounded-full w-fit">
+                                        {testimonial.result}
+                                    </span>
+                                )}
+                            </div>
                         </div>
                       </CardContent>
                     </Card>
@@ -80,6 +88,30 @@ export function Testimonials() {
               ))}
             </CarouselContent>
           </Carousel>
+        </ScrollReveal>
+
+        <ScrollReveal delay={400}>
+          <div className="mt-20 flex flex-col items-center space-y-8 text-center max-w-2xl mx-auto">
+            <div className="space-y-4">
+              <p className="text-2xl font-bold text-foreground">
+                Essas mulheres retomaram o controle.
+              </p>
+              <p className="text-xl text-muted-foreground italic">
+                Agora é a sua vez.
+              </p>
+            </div>
+            
+            <div className="w-full max-w-sm">
+                <Link href="https://pay.kiwify.com.br/yoHKy7Q" target="_blank" rel="noopener noreferrer" passHref className="w-full">
+                    <Button 
+                      size="lg" 
+                      className="w-full text-xl py-8 font-black premium-glow shimmer shadow-2xl shadow-primary/20"
+                    >
+                      Quero meu acesso agora
+                    </Button>
+                </Link>
+            </div>
+          </div>
         </ScrollReveal>
       </div>
     </section>
