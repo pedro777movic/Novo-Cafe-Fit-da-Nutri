@@ -52,7 +52,7 @@ export function Testimonials() {
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
              <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm">Depoimentos</h2>
-            <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline italic">O controle já foi retomado.</h2>
+            <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline italic text-gradient-green">O controle já foi retomado.</h2>
           </div>
         </ScrollReveal>
         <ScrollReveal delay={200}>
@@ -75,7 +75,7 @@ export function Testimonials() {
                             "{testimonial.quote}"
                         </p>
                         <div className="flex items-center gap-4">
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-500 flex items-center justify-center font-bold text-background uppercase">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center font-bold text-background uppercase">
                                 {testimonial.author[0]}
                             </div>
                             <div className="flex flex-col">

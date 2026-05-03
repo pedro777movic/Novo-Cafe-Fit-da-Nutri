@@ -9,7 +9,7 @@ export function Header() {
         <Coffee className="h-7 w-7 text-primary" />
         <span className="sr-only">Café Fit da Nutri</span>
       </Link>
-      <span className="ml-3 text-xl md:text-2xl font-black font-headline tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">
+      <span className="ml-3 text-xl md:text-2xl font-black font-headline tracking-tight text-gradient-green">
         Café Fit
       </span>
       <nav className="ml-auto flex gap-4 sm:gap-6">

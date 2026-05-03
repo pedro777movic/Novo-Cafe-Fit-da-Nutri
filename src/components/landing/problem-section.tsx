@@ -7,9 +7,9 @@ export function ProblemSection() {
         <ScrollReveal>
           <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
             <div className="space-y-4">
-              <h2 className="text-3xl font-black tracking-tight sm:text-5xl font-headline leading-tight sm:leading-none">
+              <h2 className="text-3xl font-black tracking-tight sm:text-5xl font-headline leading-tight sm:leading-none text-gradient-green">
                 O problema nunca foi falta <br className="hidden sm:block" />
-                <span className="text-primary italic">de força de vontade.</span>
+                <span className="italic">de força de vontade.</span>
               </h2>
             </div>
             

@@ -18,7 +18,7 @@ export function InvisibleControl() {
                 <div className="space-y-8">
                     <div className="space-y-4">
                         <h2 className="text-primary font-bold tracking-[0.2em] uppercase text-sm">Método Controle Invisível</h2>
-                        <h3 className="text-3xl font-black tracking-tighter sm:text-6xl font-headline leading-[1.1] sm:leading-[0.9]">
+                        <h3 className="text-3xl font-black tracking-tighter sm:text-6xl font-headline leading-[1.1] sm:leading-[0.9] text-gradient-green">
                             Isso não é mais um <br className="hidden sm:block" />
                             <span className="italic opacity-50">app de dieta.</span>
                         </h3>

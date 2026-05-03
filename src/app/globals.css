@@ -10,24 +10,24 @@
     --card-foreground: 210 20% 98%;
     --popover: 230 15% 5%;
     --popover-foreground: 210 20% 98%;
-    --primary: 260 80% 70%;
-    --primary-foreground: 260 20% 5%;
+    --primary: 122 39% 49%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 230 15% 12%;
     --secondary-foreground: 210 20% 98%;
     --muted: 230 15% 15%;
     --muted-foreground: 215 15% 65%;
-    --accent: 260 80% 70%;
+    --accent: 123 41% 57%;
     --accent-foreground: 210 20% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;
-    --border: 230 15% 15%;
+    --border: 122 39% 20%;
     --input: 230 15% 15%;
-    --ring: 260 80% 70%;
-    --chart-1: 260 80% 70%;
-    --chart-2: 240 60% 60%;
-    --chart-3: 280 60% 60%;
-    --chart-4: 300 60% 60%;
-    --chart-5: 320 60% 60%;
+    --ring: 122 39% 49%;
+    --chart-1: 122 39% 49%;
+    --chart-2: 123 41% 57%;
+    --chart-3: 123 46% 34%;
+    --chart-4: 128 44% 80%;
+    --chart-5: 122 39% 60%;
     --radius: 1rem;
 
     --progress-track: 155 82% 23%;
@@ -41,19 +41,19 @@
     --card-foreground: 210 20% 98%;
     --popover: 230 15% 5%;
     --popover-foreground: 210 20% 98%;
-    --primary: 260 80% 70%;
-    --primary-foreground: 260 20% 5%;
+    --primary: 122 39% 49%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 230 15% 12%;
     --secondary-foreground: 210 20% 98%;
     --muted: 230 15% 15%;
     --muted-foreground: 215 15% 65%;
-    --accent: 260 80% 70%;
+    --accent: 123 41% 57%;
     --accent-foreground: 210 20% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 20% 98%;
-    --border: 230 15% 15%;
+    --border: 122 39% 20%;
     --input: 230 15% 15%;
-    --ring: 260 80% 70%;
+    --ring: 122 39% 49%;
   }
 }
 
@@ -65,13 +65,17 @@
     @apply bg-background text-foreground;
   }
 
+  .text-gradient-green {
+    @apply bg-gradient-to-r from-[#4CAF50] to-[#66BB6A] bg-clip-text text-transparent;
+  }
+
   .premium-glow {
     @apply relative overflow-hidden;
   }
 
   .premium-glow::before {
     content: '';
-    @apply absolute -inset-px bg-gradient-to-r from-primary/30 via-primary/10 to-primary/30 rounded-[inherit] -z-10 blur-xl opacity-0 transition-opacity duration-500;
+    @apply absolute -inset-px bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-[inherit] -z-10 blur-xl opacity-0 transition-opacity duration-500;
   }
 
   .premium-glow:hover::before {
@@ -79,7 +83,7 @@
   }
 
   .glass-card {
-    @apply bg-card/40 backdrop-blur-xl border border-white/5 shadow-2xl;
+    @apply bg-card/40 backdrop-blur-xl border border-primary/10 shadow-2xl;
   }
 
   .shimmer {

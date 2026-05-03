@@ -21,17 +21,17 @@ export function Experience() {
     {
       title: "Comer sem culpa.",
       description: "A melhor sensação não é emagrecer. É terminar uma refeição sem pensar: “eu estraguei tudo.” Sem culpa. Sem compensação. Sem promessas vazias.",
-      color: "from-blue-500/20 to-indigo-500/10"
+      color: "from-[#4CAF50]/20 to-[#E8F5E9]/10"
     },
     {
       title: "Retomar o controle.",
       description: "Não é sobre disciplina. É abrir a geladeira e já saber exatamente o que comer. Sem ansiedade. Sem indecisão. Sem compulsão no fim da noite.",
-      color: "from-primary/20 to-purple-500/10"
+      color: "from-primary/20 to-accent/10"
     },
     {
       title: "Confiar em si de novo.",
       description: "Quando o processo é simples, a constância deixa de ser uma luta. Você para de se sabotar porque não precisa mais lutar contra si mesma todos os dias.",
-      color: "from-purple-500/20 to-pink-500/10"
+      color: "from-accent/20 to-[#2E7D32]/10"
     }
   ]
 

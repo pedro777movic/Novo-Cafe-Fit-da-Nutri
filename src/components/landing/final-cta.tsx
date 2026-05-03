@@ -50,7 +50,7 @@ export function FinalCta() {
           <div className="flex flex-col items-center space-y-12 text-center max-w-5xl mx-auto">
             
             <div className="space-y-6 max-w-3xl">
-                <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline">
+                <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline text-gradient-green">
                     Você chegou até aqui.
                 </h2>
                 <div className="space-y-4 text-xl text-muted-foreground leading-relaxed">
@@ -61,7 +61,7 @@ export function FinalCta() {
             </div>
 
             <div className="w-full glass-card px-4 py-10 sm:p-16 rounded-3xl md:rounded-[3rem] border-white/10 relative shadow-[0_0_100px_rgba(var(--primary),0.1)]">
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-purple-500 to-primary" />
+                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-accent to-primary" />
                 
                 <div className="grid lg:grid-cols-2 gap-12 text-left items-start">
                     <div className="space-y-8">

@@ -8,8 +8,8 @@ export function Hero() {
     <section className="w-full pt-24 pb-16 md:pt-36 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden relative">
       {/* Background Glows */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full -z-10 pointer-events-none">
-        <div className="absolute top-[-10%] left-[10%] w-[40%] h-[40%] bg-primary/20 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[20%] right-[10%] w-[30%] h-[30%] bg-purple-500/10 blur-[100px] rounded-full" />
+        <div className="absolute top-[-10%] left-[10%] w-[40%] h-[40%] bg-primary/15 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[20%] right-[10%] w-[30%] h-[30%] bg-accent/10 blur-[100px] rounded-full" />
       </div>
 
       <div className="container px-4 md:px-6 relative">
@@ -21,7 +21,7 @@ export function Hero() {
               </h2>
               <h1 className="text-4xl font-black tracking-tighter sm:text-7xl md:text-8xl font-headline text-foreground leading-[1.1] sm:leading-[0.9]">
                 Emagreça comendo <br className="hidden sm:block" />
-                <span className="bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent italic"> receitas fit</span>
+                <span className="text-gradient-green italic"> receitas fit</span>
               </h1>
               <p className="mx-auto max-w-[700px] text-muted-foreground text-lg sm:text-xl md:text-2xl mt-4 leading-relaxed">
                 Emagreça comendo receitas fit que você realmente vai fazer — sem viver em guerra com a comida.

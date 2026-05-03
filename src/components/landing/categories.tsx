@@ -38,7 +38,7 @@ export function Categories() {
       <div className="container px-4 md:px-6 relative">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-            <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline italic">
+            <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline italic text-gradient-green">
                 Comer bem pode ser assim:
             </h2>
             <p className="max-w-[800px] text-muted-foreground text-lg md:text-xl leading-relaxed">

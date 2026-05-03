@@ -111,11 +111,16 @@ export function Showcase() {
   )
 
   return (
-    <section className="w-full py-12 md:py-16 lg:py-20 bg-background">
+    <section className="w-full py-12 md:py-16 lg:py-20 bg-background relative overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-full -z-10 pointer-events-none opacity-20">
+        <div className="absolute inset-0 bg-primary/20 blur-[120px] rounded-full" />
+      </div>
+
       <div className="container px-4 md:px-6">
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-            <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline italic">
+            <h2 className="text-4xl font-black tracking-tighter sm:text-6xl font-headline italic text-gradient-green">
               + 500 Receitas Fit
             </h2>
             <p className="max-w-[700px] text-xl text-muted-foreground md:text-2xl font-medium tracking-tight">
